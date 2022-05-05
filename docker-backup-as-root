@@ -1,5 +1,5 @@
 #!/bin/bash
-#Docker bind backup script - if user does not have full file ownerships
+#Docker bind backup script - root used to make tar.gz, user used to copy tar.gz to backup directory.
 
 set -x
 

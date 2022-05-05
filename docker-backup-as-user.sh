@@ -1,6 +1,8 @@
 #!/bin/bash
 #Docker bind backup script - if user has full ownerships in both /docker and backup directory.
 
+set -e
+
 DATE=$(date '+%Y-%m-%d')
 
 DOCKERCOMPOSEFILE=/docker/docker-compose.yml

@@ -1,5 +1,5 @@
 #!/bin/bash
-#Docker bind backup script - if user has full file ownerships
+#Docker bind backup script - if user has full ownerships in both /docker and backup directory.
 
 DATE=$(date '+%Y-%m-%d')
 

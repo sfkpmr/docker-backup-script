@@ -1,6 +1,7 @@
 #!/bin/bash
 #Docker bind backup script - if user has full ownerships in both /docker and backup directory.
 
+#Exit immediately if a pipeline returns a non-zero status - https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html
 set -e
 
 DATE=$(date '+%Y-%m-%d')

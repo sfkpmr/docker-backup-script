@@ -10,9 +10,9 @@ DOCKERCOMPOSEFILE=
 BACKUPPATH=
 BACKUPNAME=
 
-cd $HOME
+cd "$HOME"
 
 #Pause containers, backup and unpause containers
 #The -f option should directly precede the filename. So, use tar -vczf filename.tar.gz instead of -vcfz
-docker-compose -f "${DOCKERCOMPOSEFILE}" pause && tar -zvcpf "$BACKUPNAME" /docker/ && cp ${BACKUPNAME} ${BACKUPPATH} && rm -f "$BACKUPNAME"
+docker-compose -f "${DOCKERCOMPOSEFILE}" pause && tar -zvcpf "$BACKUPNAME" /docker/ && cp "${BACKUPNAME}" "${BACKUPPATH}" && rm -f "$BACKUPNAME"
 docker-compose -f "${DOCKERCOMPOSEFILE}" unpause

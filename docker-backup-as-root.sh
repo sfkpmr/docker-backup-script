@@ -15,5 +15,5 @@ cd /tmp
 
 #Pause containers, backup and unpause containers
 #The -f option should directly precede the filename. So, use tar -vczf filename.tar.gz instead of -vcfz
-docker-compose -f ${DOCKERCOMPOSEFILE} pause && tar -zvcpf $BACKUPNAME /docker && chown $BACKUPUSER:$BACKUPUSER $BACKUPNAME && su - $BACKUPUSER -c "cp /tmp/$BACKUPNAME $BACKUPPATH" && rm -f $BACKUPNAME
-docker-compose -f ${DOCKERCOMPOSEFILE} unpause
+docker-compose -f "${DOCKERCOMPOSEFILE}" pause && tar -zvcpf "$BACKUPNAME" /docker && chown "$BACKUPUSER":"$BACKUPUSER" "$BACKUPNAME" && su - "$BACKUPUSER" -c "cp /tmp/$BACKUPNAME $BACKUPPATH" && rm -f "$BACKUPNAME"
+docker-compose -f "${DOCKERCOMPOSEFILE}" unpause

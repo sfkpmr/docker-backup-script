@@ -6,9 +6,9 @@ set -e
 
 DATE=$(date '+%Y-%m-%d')
 
-DOCKERCOMPOSEFILE=/docker/docker-compose.yml
-BACKUPPATH="/mnt/backups/servers/${HOSTNAME}/"
-BACKUPNAME="${HOSTNAME}-${DATE}.tar.gz"
+DOCKERCOMPOSEFILE=
+BACKUPPATH=
+BACKUPNAME=
 
 cd $HOME
 
